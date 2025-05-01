@@ -1,5 +1,5 @@
 // import AppLogoIcon from '@/components/app-logo-icon';
-import JomarLogoIcon from '@/components/jdo-log';
+// import JomarLogoIcon from '@/components/jdo-log';
 import { Link } from '@inertiajs/react';
 import { type PropsWithChildren } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -21,7 +21,7 @@ export default function AuthSimpleLayout({ children, title, description }: Props
                     <div className="flex flex-col items-center gap-4">
                         <Link href={route('home')} className="flex flex-col items-center gap-2 font-medium">
                             <div className="mb-1 flex h-9 w-9 items-center justify-center rounded-md">
-                            <JomarLogoIcon className="size-9 fill-current text-[var(--foreground)] dark:text-white"/>
+                            {/* <JomarLogoIcon className="size-9 fill-current text-[var(--foreground)] dark:text-white"/> */}
                             </div>
                             <span className="sr-only">{title}</span>
                         </Link>
