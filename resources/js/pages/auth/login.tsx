@@ -9,7 +9,10 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import AuthLayout from '@/layouts/auth-layout';
-
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
 
 
 type LoginForm = {
@@ -39,8 +42,14 @@ export default function Login({ status, canResetPassword }: LoginProps) {
 
     return (
 
-        <AuthLayout title="Login Form" description="">
+        <AuthLayout title="" description="">
             <Head title="Log in" />
+
+            <Box sx={{ minWidth: 350 }}>
+                <Card variant="outlined" sx={{ padding: 4 }}>
+                   <div className="log" id="log">
+                      <h1>Login Form</h1>
+                   </div>
                     <form className="flex flex-col gap-6" onSubmit={submit}>
                         <div className="grid gap-6">
                             <div className="grid gap-2">
@@ -108,7 +117,8 @@ export default function Login({ status, canResetPassword }: LoginProps) {
 
 
                     {status && <div className="mb-4 text-center text-sm font-medium text-green-600">{status}</div>}
-          
+                </Card>
+            </Box>
         </AuthLayout>
 
     );
