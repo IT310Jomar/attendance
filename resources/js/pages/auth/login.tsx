@@ -42,14 +42,8 @@ export default function Login({ status, canResetPassword }: LoginProps) {
 
     return (
 
-        <AuthLayout title="" description="">
+        <AuthLayout title="Login Form" description="">
             <Head title="Log in" />
-
-            <Box sx={{ minWidth: 350 }}>
-                <Card variant="outlined" sx={{ padding: 4 }}>
-                   <div className="log" id="log">
-                      <h1>Login Form</h1>
-                   </div>
                     <form className="flex flex-col gap-6" onSubmit={submit}>
                         <div className="grid gap-6">
                             <div className="grid gap-2">
@@ -117,8 +111,7 @@ export default function Login({ status, canResetPassword }: LoginProps) {
 
 
                     {status && <div className="mb-4 text-center text-sm font-medium text-green-600">{status}</div>}
-                </Card>
-            </Box>
+          
         </AuthLayout>
 
     );
